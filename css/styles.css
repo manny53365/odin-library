@@ -10,6 +10,7 @@ body {
 dialog {
     margin: auto;
     padding: 20px;
+    border-radius: 10px;
 }
 
 form, input, button {
@@ -30,6 +31,29 @@ form, input, button {
     margin: 20px;
 }
 
+.sign-in {
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+.book-container {
+    text-align: center;
+}
+
+.add-book-btn {
+    margin-top: 30px;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+}
+
+.add-book-btn:hover, .sign-in:hover {
+    background-color: rgb(205, 204, 204);
+}
+
 .book-cards {
     display: flex;
     flex-direction: row;
@@ -44,4 +68,20 @@ form, input, button {
     margin-top: 2%;
     align-items: center;
     font-size: 1.5rem;
+}
+
+.read-button {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+}
+
+  .not-read-button {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
 }
