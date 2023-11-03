@@ -21,7 +21,7 @@ const createAddBookDialog = () => {
       const pages = event.target.pages.value;
       const read = event.target.read.checked;
 
-      const newBook = Book(title,author,pages,read);
+      const newBook = new Book(title,author,pages,read);
 
       addBookToLibrary(newBook);
 
@@ -101,7 +101,6 @@ const addBookToLibrary = (book) => {
 
 const addBooksToDom = () => {
     const booksArr = document.getElementById('book-cards');
-
     booksArr.textContent = '';
     
     myLibrary.forEach((book, index) => {
