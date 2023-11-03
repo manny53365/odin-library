@@ -1,35 +1,4 @@
-const myLibrary = [
-    {
-        title: "Test Book",
-        author: "fwEFHTG",
-        pages: 3,
-        read: true
-    },
-    {
-        title: "Test Book 2",
-        author: "fwEFHTG",
-        pages: 3,
-        read: false
-    },
-    {
-        title: "Test Book 3",
-        author: "fwEFHTG",
-        pages: 3,
-        read: false
-    },
-    {
-        title: "Test Book 4",
-        author: "fwEFHTG",
-        pages: 3,
-        read: false
-    },
-    {
-        title: "Test Book 5",
-        author: "fwEFHTG",
-        pages: 3,
-        read: false
-    }
-];
+const myLibrary = [];
 
 const addBookBtn = document.getElementById('add-book-btn');
 
