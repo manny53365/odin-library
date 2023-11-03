@@ -14,12 +14,7 @@ body {
     justify-content: space-between;
 }
 
-.top-left {
-    display: inherit;
-    margin: 20px;
-}
-
-.top-right {
+.top-left, .top-right {
     display: inherit;
     margin: 20px;
 }
