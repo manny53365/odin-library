@@ -124,8 +124,6 @@ const displayAddBookModal = () => {
     dialog.showModal();
 };
 
-addBookBtn.addEventListener('click', displayAddBookModal);
-
 const addBookToLibrary = (book) => {
     myLibrary.push(book);
 }
@@ -157,3 +155,5 @@ const addBooksToDom = () => {
       booksArr.appendChild(bookCard);
     });
 };
+
+addBookBtn.addEventListener('click', displayAddBookModal);
