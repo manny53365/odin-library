@@ -29,6 +29,16 @@ form, input, button {
     display: inherit;
     margin: 20px;
 }
+.book-container {
+    text-align: center;
+}
+
+.add-book-btn {
+    margin-top: 30px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+}
 
 .book-cards {
     display: flex;
