@@ -102,7 +102,7 @@ const addBooksToDom = () => {
 
     booksArr.textContent = '';
     
-    myLibrary.forEach((book) => {
+    myLibrary.forEach((book, index) => {
       const bookCard = document.createElement('div');
       bookCard.classList.add('book-card');
 
@@ -116,10 +116,17 @@ const addBooksToDom = () => {
       pagesElement.textContent = `Pages: ${book.pages}`;
       readElement.textContent = `Read: ${book.read}`;
 
+      const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', () => {
+            removeBook(index);
+        });
+
       bookCard.appendChild(titleElement);
       bookCard.appendChild(authorElement);
       bookCard.appendChild(pagesElement);
       bookCard.appendChild(readElement);
+      bookCard.appendChild(removeButton);
       
       booksArr.appendChild(bookCard);
     });
