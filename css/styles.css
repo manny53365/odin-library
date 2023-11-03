@@ -45,3 +45,19 @@ form, input, button {
     align-items: center;
     font-size: 1.5rem;
 }
+
+.read-button {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+}
+
+  .not-read-button {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+}
