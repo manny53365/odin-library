@@ -2,6 +2,13 @@ const myLibrary = [];
 
 const addBookBtn = document.getElementById('add-book-btn');
 
+function Book(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+};
+
 const createAddBookDialog = () => {
     const dialog = document.createElement('dialog');
     dialog.id = 'addBookDialog';
@@ -14,12 +21,7 @@ const createAddBookDialog = () => {
       const pages = event.target.pages.value;
       const read = event.target.read.checked;
 
-      const newBook = {
-        title: title,
-        author: author,
-        pages: pages,
-        read: read,
-      };
+      const newBook = Book(title,author,pages,read);
 
       addBookToLibrary(newBook);
 
