@@ -41,6 +41,10 @@ form, input, button {
     height: 50px;
 }
 
+.add-book-btn:hover {
+    background-color: rgb(205, 204, 204);
+}
+
 .book-cards {
     display: flex;
     flex-direction: row;
