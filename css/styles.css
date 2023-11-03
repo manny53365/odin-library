@@ -30,6 +30,14 @@ form, input, button {
     display: inherit;
     margin: 20px;
 }
+
+.sign-in {
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
 .book-container {
     text-align: center;
 }
@@ -42,7 +50,7 @@ form, input, button {
     height: 50px;
 }
 
-.add-book-btn:hover {
+.add-book-btn:hover, .sign-in:hover {
     background-color: rgb(205, 204, 204);
 }
 
