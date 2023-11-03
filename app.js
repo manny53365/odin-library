@@ -37,18 +37,21 @@ const createAddBookDialog = () => {
     const titleInput = document.createElement('input');
     titleInput.type = 'text';
     titleInput.name = 'title';
+    titleInput.required = true;
   
     const authorLabel = document.createElement('label');
     authorLabel.textContent = 'Author: ';
     const authorInput = document.createElement('input');
     authorInput.type = 'text';
     authorInput.name = 'author';
+    authorInput.required = true;
 
     const pagesLabel = document.createElement('label');
     pagesLabel.textContent = 'Pages: ';
     const pagesInput = document.createElement('input');
     pagesInput.type = 'number';
     pagesInput.name = 'pages';
+    pagesInput.required = true;
 
     const readLabel = document.createElement('label');
     readLabel.textContent = 'Read: ';
