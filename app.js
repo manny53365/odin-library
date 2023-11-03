@@ -132,4 +132,9 @@ const addBooksToDom = () => {
     });
 };
 
+const removeBook = (index) => {
+    myLibrary.splice(index, 1);
+    addBooksToDom();
+}
+
 addBookBtn.addEventListener('click', displayAddBookModal);
