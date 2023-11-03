@@ -103,32 +103,43 @@ const addBooksToDom = () => {
     booksArr.textContent = '';
     
     myLibrary.forEach((book, index) => {
-      const bookCard = document.createElement('div');
-      bookCard.classList.add('book-card');
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
 
-      const titleElement = document.createElement('p');
-      const authorElement = document.createElement('p');
-      const pagesElement = document.createElement('p');
-      const readElement = document.createElement('p');
+        const titleElement = document.createElement('p');
+        const authorElement = document.createElement('p');
+        const pagesElement = document.createElement('p');
+        const readElement = document.createElement('p');
 
-      titleElement.textContent = `Title: ${book.title}`;
-      authorElement.textContent = `Author: ${book.author}`;
-      pagesElement.textContent = `Pages: ${book.pages}`;
-      readElement.textContent = `Read: ${book.read}`;
+        titleElement.textContent = `Title: ${book.title}`;
+        authorElement.textContent = `Author: ${book.author}`;
+        pagesElement.textContent = `Pages: ${book.pages}`;
+      
+        const readButton = document.createElement('button');
+        readButton.textContent = book.read ? 'Read' : 'Not Read';
+        readButton.classList.add(book.read ? 'read-button' : 'not-read-button');
 
-      const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.addEventListener('click', () => {
-            removeBook(index);
+        readButton.addEventListener('click', () => {
+        book.read = !book.read;
+
+        readButton.textContent = book.read ? 'Read' : 'Not Read';
+        readButton.classList.toggle('read-button');
+        readButton.classList.toggle('not-read-button');
         });
 
-      bookCard.appendChild(titleElement);
-      bookCard.appendChild(authorElement);
-      bookCard.appendChild(pagesElement);
-      bookCard.appendChild(readElement);
-      bookCard.appendChild(removeButton);
-      
-      booksArr.appendChild(bookCard);
+        const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.addEventListener('click', () => {
+                removeBook(index);
+            });
+
+        bookCard.appendChild(titleElement);
+        bookCard.appendChild(authorElement);
+        bookCard.appendChild(pagesElement);
+        bookCard.appendChild(readButton);
+        bookCard.appendChild(removeButton);
+        
+        booksArr.appendChild(bookCard);
     });
 };
 
