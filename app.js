@@ -109,13 +109,11 @@ const addBooksToDom = () => {
         const titleElement = document.createElement('p');
         const authorElement = document.createElement('p');
         const pagesElement = document.createElement('p');
-        const readElement = document.createElement('p');
+        const readButton = document.createElement('button');
 
         titleElement.textContent = `Title: ${book.title}`;
         authorElement.textContent = `Author: ${book.author}`;
         pagesElement.textContent = `Pages: ${book.pages}`;
-      
-        const readButton = document.createElement('button');
         readButton.textContent = book.read ? 'Read' : 'Not Read';
         readButton.classList.add(book.read ? 'read-button' : 'not-read-button');
 
