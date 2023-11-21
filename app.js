@@ -1,3 +1,7 @@
+import { Int32 } from "bson";
+import "dotenv/config";
+import mongoose from "mongoose";
+
 const myLibrary = [];
 
 const addBookBtn = document.getElementById('add-book-btn');
@@ -8,6 +12,15 @@ function Book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
 };
+
+const bookSchema = {
+    title: String,
+    author: String,
+    pages: Int32,
+    read: Boolean
+}
+
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0.ybw2pni.mongodb.net/libraryDB`);
 
 const createAddBookDialog = () => {
     const dialog = document.createElement('dialog');
