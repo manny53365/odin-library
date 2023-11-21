@@ -16,7 +16,7 @@ function Book(title, author, pages, read) {
 const bookSchema = {
     title: String,
     author: String,
-    pages: Int32,
+    pages: Number,
     read: Boolean
 }
 
