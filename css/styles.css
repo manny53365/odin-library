@@ -140,3 +140,20 @@ footer {
         width: 45%;
     }
 }
+
+/* tablet or small screen styles  */
+
+@media only screen and (max-width: 1024px){
+
+    .top-container {
+        align-items: center;
+    }
+
+    .book-cards {
+        justify-content: space-evenly;
+    }
+
+    .book-card {
+        width: 45%;
+    }
+}
