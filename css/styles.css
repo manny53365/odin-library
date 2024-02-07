@@ -105,3 +105,55 @@ footer {
 .gh-link {
     color: black;
 }
+
+/* mobile screen styles  */
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        height: 100%;
+        width: 100%;
+    }
+
+    .top-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .top-left, .top-right {
+        margin: 10px;
+    }
+
+    .sign-in {
+        height: 40px;
+        width: 125px;
+    }
+
+    .add-book-btn {
+        margin-top: 15px;
+        width: 125px;
+        height: 40px;
+    }
+
+    .book-card {
+        width: 45%;
+    }
+}
+
+/* tablet or small screen styles  */
+
+@media only screen and (max-width: 1024px){
+
+    .top-container {
+        align-items: center;
+    }
+
+    .book-cards {
+        justify-content: space-evenly;
+    }
+
+    .book-card {
+        width: 45%;
+    }
+}
